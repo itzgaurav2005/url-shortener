@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ACE2E1;
+        }
+        td{
+            padding: 0 15px;
+        }
+        .form{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: large;
+        }
+        #heading{
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            cursor: pointer;
+        }
+        .login-button{
+            margin-left: 90px;
+            margin-top: 10px;
+            margin-right: 100px;
+            height: 30px;
+            width: 70px;
+            border-radius: 10%;
+            box-shadow: 1px 0px 10px;
+            background-color: #9BB8CD;
+            font-size: large;
+            justify-content: center;
+        }
+        .create{
+            margin-left: 20px;
+            height: 40px;
+            width: 300px;
+            box-shadow: 1px 35px 50px;
+            background-color: #9CAFAA;
+            font-size: x-large;
+            border-color: #9CAFAA;
+        }
+        .create-button{
+            display: flex;
+            justify-content: center;
+        }
+        .password{
+            font-size: large;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div id="heading"><h1 >Login</h1></div>
+    <form action="/user/login" method="post">
+        <div class="form">
+        <div><label for="">Email</label>
+            <input type="text" required name="email" placeholder="example@gmail.com" ></div> 
+        <div class="password"><label for="">Password</label>
+            <input type="password" required name="password" placeholder="******************" ></div>
+
+        <button class="login-button" type="submit">Login</button>
+    </div>
+    </form>
+
+    <div id="heading"><h1>Welcome to URL Shortener</h1></div>
+    <div class="create-button" onclick="redirect()"><button class="create">Create Account</button></div>
+    <script>
+        var redirect=function(){
+    window.location.href="http://localhost:8001/signup"
+   }
+    </script>
+</body>
+</html>

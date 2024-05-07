@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #98E4FF;
+        }
+        td{
+            padding: 0 15px;
+        }
+        .form{
+            width: 300px;
+            margin: 3px;
+            padding: 3px;
+        }
+        .input-box{
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+        }
+        #password{
+            margin-bottom: 10px;
+        }
+        button{
+            margin-left: 90px;
+            margin-top: 10px;
+            height: 40px;
+            width: 80px;
+            border-radius: 10%;
+            box-shadow: 1px 0px 10px;
+            background-color: #FFF5E0;
+        }
+        .bada-div{
+            display: flex;
+            justify-content: center;
+            font-size: x-large;
+        }
+        .chotu{
+            display: flex;
+            justify-content: center;
+            font-size: xx-large;
+        }
+        .create-button{
+            display: flex;
+            justify-content: center;
+            margin-right: 125px;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+</head>
+<body>
+    <div class="chotu"><h1>SignUp</h1></div>
+    <div class="bada-div">
+    <form action="/user" method="post">
+       <div class="form"> <div class="input-box"><label for="">Full name</label>
+            <input type="text" required name="name" placeholder="Enter Your Name Here" ></div>
+        
+        <div class="input-box"><label for="">Email</label>
+            <input type="text" required name="email" placeholder="example@gmail.com" ></div> 
+        <div class="input-box" id="password">
+            <label for="">Password</label>
+        <input type="password"  required name="password" placeholder="**********************">
+        </div>
+        
+        <button type="submit" style="font-size: large;">SignUp</button></div>
+    </form>
+</div>
+
+<div class="create-button" onclick="redirect()"><button class="create" style="width: 500px; background-color: #B3C8CF; font-size: x-large;">Go to Login</button></div>
+    <script>
+        var redirect=function(){
+    window.location.href="http://localhost:8001/login"
+   }
+    </script>
+</body>
+</html>
